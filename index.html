@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BADDIE LASH | Luxury Lash Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff8fb;
+    color: #21151b;
+}
+
+.topbar {
+    background: #171217;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+header {
+    background: #f8dce8;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #cf4782;
+}
+
+nav a {
+    text-decoration: none;
+    color: #21151b;
+    margin: 0 12px;
+    font-size: 12px;
+}
+
+.hero {
+    background: #f6c9dc;
+    padding: 55px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: #c43d78;
+}
+
+.hero p {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #634653;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    background: #f9dce8;
+    border-radius: 8px;
+}
+
+.button {
+    display: inline-block;
+    background: #171217;
+    color: white;
+    padding: 14px 30px;
+    margin-top: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+section {
+    padding: 60px 6%;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #88717b;
+    margin-bottom: 35px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #f0d5e1;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #e6b5ca55;
+}
+
+.product img {
+    width: 100%;
+    height: 330px;
+    object-fit: contain;
+    background: #f8dce8;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product h3 {
+    font-size: 17px;
+}
+
+.product p {
+    color: #88717b;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.price {
+    color: #d94f87;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.product button {
+    background: #171217;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.product button:hover {
+    background: #d94f87;
+}
+
+.banner {
+    background: #171217;
+    color: #f7c8dc;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
+
+.banner p {
+    margin-top: 12px;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.about {
+    text-align: center;
+    line-height: 2;
+    max-width: 800px;
+    margin: auto;
+}
+
+footer {
+    background: #f7c8dc;
+    padding: 25px;
+    text-align: center;
+    font-size: 12px;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    ✨ FREE SHIPPING ON ORDERS OVER $50 ✨
+</div>
+
+<header>
+    <div class="logo">BADDIE <span>LASH</span></div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#shop">SHOP</a>
+        <a href="#about">ABOUT</a>
+    </nav>
+
+    <div>🛍 BAG <span id="cart">0</span></div>
+</header>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+
+    <div>
+        <h1>Be Bold.<br>
+        <span>Be a Baddie.</span></h1>
+
+        <p>
+            Premium DIY lash clusters for your everyday glam.
+            Find your perfect lash look with BADDIE LASH.
+        </p>
+
+        <a href="#shop" class="button">SHOP NOW</a>
+    </div>
+
+    <img src="lash-kit.jpg" alt="BADDIE LASH pink lash kit">
+</div>
+
+<!-- SHOP -->
+
+<section id="shop">
+
+    <h2 class="section-title">Best Sellers</h2>
+
+    <p class="subtitle">
+        Your favorite lashes. Your favorite look. ♡
+    </p>
+
+    <div class="products">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product">
+
+            <img src="lash-kit.jpg"
+                 alt="Pink DIY lash kit with bond seal and applicator">
+
+            <div class="product-info">
+
+                <h3>THE BADDIE LASH KIT</h3>
+
+                <p>
+                    DIY lash clusters with bond, seal
+                    and lash applicator.
+                </p>
+
+                <div class="price">$24.00</div>
+
+                <button onclick="addToBag()">
+                    ADD TO BAG
+                </button>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product">
+
+            <img src="lash-mixed.jpg"
+                 alt="False eyelashes in mixed lengths">
+
+            <div class="product-info">
+
+                <h3>MIXED LENGTH LASHES</h3>
+
+                <p>
+                    Multiple lash lengths for a customized
+                    lash look.
+                </p>
+
+                <div class="price">$15.00</div>
+
+                <button onclick="addToBag()">
+                    ADD TO BAG
+                </button>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+
+            <img src="lash-volume.jpg"
+                 alt="Thick black false eyelash clusters">
+
+            <div class="product-info">
+
+                <h3>VOLUME BADDIE</h3>
+
+                <p>
+                    Full, dark and dramatic lash clusters
+                    for extra glam.
+                </p>
+
+                <div class="price">$18.00</div>
+
+                <button onclick="addToBag()">
+                    ADD TO BAG
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BRAND BANNER -->
+
+<div class="banner">
+
+    <h2>Good Lashes. Bad Intentions. ♡</h2>
+
+    <p>
+        BE CONFIDENT. BE BEAUTIFUL. BE A BADDIE.
+    </p>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">About BADDIE LASH</h2>
+
+    <div class="about">
+
+        BADDIE LASH is a beauty brand created
+        for girls who love confidence and glam.
+
+        Our DIY lash clusters are designed to help
+        you create your own lash look, from soft
+        everyday beauty to bold dramatic volume.
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 BADDIE LASH STUDIO
+    <br>
+    LASHES FOR THE BOLD ♡
+</footer>
+
+<script>
+
+let cart = 0;
+
+function addToBag() {
+
+    cart++;
+
+    document.getElementById("cart").innerText = cart;
+
+    alert("Added to bag! ♡");
+
+}
+
+</script>
+
+</body>
+</html> 
+<img src="lash-kit.jpg" alt="Lash Kit">
+<img src="lash-mixed.jpg" alt="Mixed Lash">
+<img src="lash-volume.jpg" alt="Volume Lash">
